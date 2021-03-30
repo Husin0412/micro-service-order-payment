@@ -10,6 +10,28 @@ class WebhookController extends Controller
 {
     public function midtransHandler(Request $request)
     {
+        // {
+        //     "transaction_time": "2020-01-09 18:27:19",
+        //     "transaction_status": "capture",
+        //     "transaction_id": "57d5293c-e65f-4a29-95e4-5959c3fa335b",
+        //     "status_message": "midtrans payment notification",
+        //     "status_code": "200",
+        //     "signature_key": "46a891df876c8ad091489acf2fb8b22e06ab52ee57b223d71a96b1393d191fd741f317184deee62f0408980a6e8ea43eefc27c07e9db6e7c3e8c80a1d1b8b496",
+        //     "payment_type": "credit_card",
+        //     "order_id": "14-acsfs",
+        //     "merchant_id": "M004123",
+        //     "masked_card": "481111-1114",
+        //     "gross_amount": "10000.00",
+        //     "fraud_status": "accept",
+        //     "eci": "05",
+        //     "currency": "IDR",
+        //     "channel_response_message": "Approved",
+        //     "channel_response_code": "00",
+        //     "card_type": "credit",
+        //     "bank": "bni",
+        //     "approval_code": "1578569243927"
+        //   }
+        
         $data = $request->all();
 
         $signatureKey = $data['signature_key'];
